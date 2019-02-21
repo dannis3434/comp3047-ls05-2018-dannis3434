@@ -168,7 +168,7 @@ module.exports = {
   *                                                                          *
   ***************************************************************************/
   session: {
-    adapter: 'sails-mongo',
+    adapter: 'connect-mongo',
     url    : 'mongodb://heroku_12345678:random_password@ds029017.mLab.com:29017/heroku_12345678'
     /***************************************************************************
     *                                                                          *
