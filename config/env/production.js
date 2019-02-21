@@ -47,8 +47,8 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     default: {
-      // adapter: 'sails-mysql',
-      // url: 'mysql://user:password@host:port/database',
+      adapter: 'sails-mongo',
+      url: 'mongodb://heroku_05s36zcq:dbc5fd2nph3gbu09eh558hj6d1@ds023213.mlab.com:23213/heroku_05s36zcq',
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
       //  ||   sensitive credentials like `url` using an environment variable.
@@ -168,7 +168,8 @@ module.exports = {
   *                                                                          *
   ***************************************************************************/
   session: {
-
+    adapter: 'sails-mongo',
+    url    : 'mongodb://heroku_12345678:random_password@ds029017.mLab.com:29017/heroku_12345678'
     /***************************************************************************
     *                                                                          *
     * Production session store configuration.                                  *
@@ -220,8 +221,8 @@ module.exports = {
     * https://sailsjs.com/config/session#?the-session-id-cookie                *
     *                                                                          *
     ***************************************************************************/
-    cookie: {
-      // secure: true,
+    ,cookie: {
+      secure: true,
       maxAge: 24 * 60 * 60 * 1000,  // 24 hours
     },
 
@@ -250,10 +251,9 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    // onlyAllowOrigins: [
-    //   'https://example.com',
-    //   'https://staging.example.com',
-    // ],
+    onlyAllowOrigins: [
+      'https://ls05-dannis3434.herokuapp.com'
+    ],
 
 
     /***************************************************************************
@@ -322,7 +322,7 @@ module.exports = {
     * (https://sailsjs.com/config/http)                                        *
     *                                                                          *
     ***************************************************************************/
-    // trustProxy: true,
+    trustProxy: true,
 
   },
 
